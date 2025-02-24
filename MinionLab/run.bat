@@ -1,5 +1,5 @@
 @echo off
-title StreamAI Bot by @MeoMunDep
+title MinionLab (StreamAI) Bot by @MeoMunDep
 color 0A
 
 cd ..
@@ -14,7 +14,7 @@ if exist node_modules (
 :MENU
 cls
 echo =================================================================
-echo    StreamAI BOT SETUP AND RUN SCRIPT by @MeoMunDep
+echo    MinionLab (StreamAI) BOT SETUP AND RUN SCRIPT by @MeoMunDep
 echo =================================================================
 echo.
 echo Current directory: %CD%
