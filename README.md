@@ -80,7 +80,7 @@ This file controls the bot’s behavior. Below is an example configuration:
 
 ### 2. `datas.txt` - 🗂️ User Data
 
-- Fill the data for `datas.txt` file, get data from [here](https://t.me/KeoAirDropFreeNe/257/42676). This file contains user data in the following format:
+- Fill the data for `datas.txt` file, get data from [here](https://t.me/KeoAirDropFreeNee/1522). This file contains user data in the following format:
 
 ```txt
 ey...
