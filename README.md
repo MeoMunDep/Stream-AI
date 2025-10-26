@@ -1,61 +1,66 @@
 # 🚀 Bot Setup Instructions
 
-Welcome to the bot setup guide! Follow the steps below to install and configure the bot correctly. This guide is designed to be beginner-friendly, with clear explanations for each step.
-
-[Termux guides if you run on mobile](https://github.com/MeoMunDep/Guides-for-using-my-script-on-termux)
-
 ---
 
 ## Table of Contents
 
-1. [Prerequisites](#prerequisites)
-2. [Installation Steps](#installation-steps)
-3. [Configuration Files](#configuration-files)
-   - [`configs.json`](#1-configsjson)
-   - [`datas.txt`](#2-datastxt)
-   - [`wallets.txt`](#3-walletstxt)
-   - [`proxies.txt`](#4-proxiestxt)
-4. [Running the Bot](#running-the-bot)
-5. [Contact and Support](#contact-and-support)
+* [Prerequisites](#prerequisites)
+* [Installation Steps](#installation-steps)
+* [Configuration Files](#configuration-files)
+* [Running the Bot](#running-the-bot)
+* [Contact and Support](#contact-and-support)
 
 ---
 
-## Prerequisites
+<details>
+<summary><strong>1. Prerequisites</strong> — click to expand</summary>
+
+### Prerequisites
 
 Before running the bot, make sure you have the following installed:
 
-- **Node.js** (Version: `22.11.0`)
-- **npm** (Version: `10.9.0`)
+* **Node.js** (Version: `22.11.0`)
+* **npm** (Version: `10.9.0`)
 
 Download Node.js and npm here: [Download Link](https://t.me/KeoAirDropFreeNe/257/1462).
 
--> Double click on `setup.bat` for windows or `setup.sh` for linux/mac if you want to run automatically, remember to fill all the necessary data.
+**Tip:** Double-click `setup.bat` (Windows) or `setup.sh` (Linux/macOS) to run an automated setup — *remember to fill all required fields first*.
 
----
+</details>
 
-## Installation Steps
+<details>
+<summary><strong>2. Installation Steps</strong> — click to expand</summary>
+
+### Installation Steps
 
 1. **Download and Extract the Bot Files:**
 
-   - Extract the bot package into a folder on your computer.
+   * Extract the bot package into a folder on your computer.
 
 2. **Install Dependencies:**
    Open your terminal or command prompt, navigate to the folder where the bot files are located, and run:
 
-   ```bash
-   npm install user-agents axios meo-forkcy-colors meo-forkcy-utils meo-forkcy-proxy meo-forkcy-logger crypto-js ws 
-   ```
+```bash
+npm install user-agents axios meo-forkcy-colors meo-forkcy-utils meo-forkcy-proxy meo-forkcy-logger crypto-js ws
+```
 
 3. **Prepare Configuration Files:**
-   - Ensure all configuration files are set up correctly before running the bot (see [Configuration Files](#configuration-files) section).
 
----
+   * Ensure all configuration files are set up correctly before running the bot (see the Configuration Files section).
 
-## Configuration Files
+</details>
 
-### 1. `configs.json` - 📜 Adjust Bot Settings
+<details>
+<summary><strong>3. Configuration Files</strong> — click to expand</summary>
 
-This file controls the bot’s behavior. Below is an example configuration:
+### Configuration Files
+
+Below each file is given a short description and an example. Expand the file you need.
+
+<details>
+<summary><strong>3.1 `configs.json`</strong> — click to expand</summary>
+
+This file controls the bot’s behavior. Example:
 
 ```json
 {
@@ -68,17 +73,21 @@ This file controls the bot’s behavior. Below is an example configuration:
 }
 ```
 
-- **Fields Explained:**
-  - `rotateProxy`: Enable or disable proxy rotation.
-  - `skipInvalidProxy`: Skip invalid proxies if `true`.
-  - `proxyRotationInterval`: Time interval (in minutes) for rotating proxies.
-  - `delayEachAccount`: Random delay range (in seconds) between accounts.
-  - `timeToRestartAllAccounts`: Time (in seconds) to restart all accounts.
-  - `howManyAccountsRunInOneTime`: Number of accounts to run simultaneously.
+* **Fields Explained:**
 
-### 2. `datas.txt` - 🗂️ User Data
+  * `rotateProxy`: Enable/disable proxy rotation.
+  * `skipInvalidProxy`: Skip invalid proxies if `true`.
+  * `proxyRotationInterval`: Time interval (minutes) for rotating proxies.
+  * `delayEachAccount`: Random delay range (seconds) between accounts.
+  * `timeToRestartAllAccounts`: Time (seconds) to restart all accounts.
+  * `howManyAccountsRunInOneTime`: Number of accounts to run simultaneously.
 
-- Fill the data for `datas.txt` file, get data from [here](https://t.me/KeoAirDropFreeNee/1522). This file contains user data in the following format:
+</details>
+
+<details>
+<summary><strong>3.2 `datas.txt`</strong> — click to expand</summary>
+
+* Fill the `datas.txt` file with account data (one row per account). Example entries are base64-like tokens (get from provided source):
 
 ```txt
 ey...
@@ -86,12 +95,14 @@ ey...
 ey...
 ```
 
-_Note: Each row for each account_
+*Source:* [https://t.me/KeoAirDropFreeNee/1522](https://t.me/KeoAirDropFreeNee/1522)
 
-### 3. `wallets.txt` - 💼 Wallet Addresses
+</details>
 
-- Wallets generator: [Link](https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop)
-- Add your wallet addresses in the following format:
+<details>
+<summary><strong>3.3 `wallets.txt`</strong> — click to expand</summary>
+
+* Add your wallet addresses (one per line):
 
 ```txt
 abc...xyz
@@ -99,11 +110,16 @@ abc...xyz
 abc...xyz
 ```
 
-_Note: Wallet updates are currently not supported._
+*Wallet generator:* [https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop](https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop)
 
-### 4. `proxies.txt` - 🌐 Proxy List (Optional)
+> Note: Wallet updates are currently not supported.
 
-If you are using proxies, add them here. Leave the file blank if you are not using proxies. Supported formats:
+</details>
+
+<details>
+<summary><strong>3.4 `proxies.txt`</strong> — click to expand</summary>
+
+If you are using proxies, add them here (one row per account). Leave blank if you are not using proxies. Supported formats:
 
 ```txt
 http://user:password@host:port
@@ -112,38 +128,43 @@ socks4://user:password@host:port
 socks5://user:password@host:port
 ```
 
-_Note: each row for each account_
+</details>
 
----
+</details>
 
-## Running the Bot
+<details>
+<summary><strong>4. Running the Bot</strong> — click to expand</summary>
+
+### Running the Bot
 
 1. Navigate to the folder containing the bot files:
 
-   ```bash
-   cd /path/to/stream-ai
-   ```
+```bash
+cd /path/to/stream-ai
+```
 
-2. Run the bot using the following command:
-   ```bash
-   node meomundep.js
-   ```
+2. Run the bot:
 
----
+```bash
+node meomundep.js
+```
 
-## Contact and Support
+</details>
 
-- **Help me with your referral** [Referral Link](https://app.allstream.ai/index?referralCode=jhnJinLO)
-- **Buy me a telegram account** [Here](https://t.me/KeoAirDropFreeNe/312/27801) or [Here](https://github.com/MeoMunDep/MeoMunDep)
+<details>
+<summary><strong>5. Contact and Support</strong> — click to expand</summary>
 
-If you encounter any issues or have questions, feel free to reach out:
+* **Help me with your referral:** [Referral Link](https://app.allstream.ai/index?referralCode=jhnJinLO)
+* **Buy me a telegram account:** [Link A](https://t.me/KeoAirDropFreeNe/312/27801) • [Link B](https://github.com/MeoMunDep/MeoMunDep)
 
-- **Contact:** [Contact Me](https://t.me/MeoMunDep)
-- **Group:** [Join the Group](https://t.me/KeoAirDropFreeNe)
-- **Channel:** [Visit the Channel](https://t.me/KeoAirDropFreeNee)
+If you encounter issues, contact:
 
-Your support is greatly appreciated! 🐱
+* **Contact:** [Contact Me](https://t.me/MeoMunDep)
+* **Group:** [Join the Group](https://t.me/KeoAirDropFreeNe)
+* **Channel:** [Visit the Channel](https://t.me/KeoAirDropFreeNee)
 
----
+Your support is appreciated! 🐱
 
-Enjoy using the bot! 🚀
+</details>
+
+
