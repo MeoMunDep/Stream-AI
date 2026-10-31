@@ -1,1 +1,1 @@
-console.log(`Wait for another update...`)
+console.log(`Ended!`);
